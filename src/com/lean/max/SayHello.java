@@ -10,16 +10,18 @@ public class SayHello {
     static Scanner reader = new Scanner(System.in);
 
 
+    public static void main(String[] args) {
+        SomeClass c = new SomeClass2();
+        SomeClass2 c2 = new SomeClass2();
+        c2.print();
+        c.print();
+    }
 
-public static void main (String[] args){
-    System.out.println("Введите Фамилию: ");
-    String surname = reader.next();
-    System.out.println("Введите Имя: ");
-    String name = reader.next();
-    System.out.println("Введите Отчество: ");
-    String patronymic = reader.next();
-    System.out.println("Ваши инициалы: " + surname + " " + name.charAt(0) + "." + patronymic.charAt(0) + ".");
 
 }
 
+class SomeClass2 extends SayHello {
+    public void print() {
+        System.out.println("message");
+    }
 }
